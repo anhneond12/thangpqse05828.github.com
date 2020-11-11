@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">    <!-- Engligh language, en stands for engligh--> 
+<head>
+
+  <title>AMD</title>  <!-- you need a title for your webpage ! -->
+  <meta charset="utf-8">    <!-- Character set of English -->
+
+  <!-- if you are using a bootstrap - we need some external links to be linked to yur webpage -->
+  <!-- because, bootstrap includes CSS, JAvascripts, html --->
+  <!-- we need to compulsorily copypaste few LINKS of bootstrap -->
+  <!-- they are called CDN links -->
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<!--- NOW , WE WILL START CODING OUR WEBSITE -->
+
+<!-- NAV BAR codes -->
+<body style="height:1500px">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="Webpage 1.html">AMD</a>
+  <ul class="navbar-nav ml-auto">  <!-- i need my menus on top right -->
+    <!-- ml-auto stands for MARGIN LEFT -->
+
+    <li class="nav-item">
+      <a class="nav-link" href="Webpage 1.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about us.html">About us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Gallery</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
+  </ul>
+  <!-- after the navbar code, I have inserted a code for SEARCH -->
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</nav>
+</nav>
+
+<div class="container-fluid" style="margin-top:80px">
+ </div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Your Products</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="F:\wed2\imagess\pr1.webp" alt="first bg image" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="F:\wed2\imagess\pr2.webp" alt="first bg image" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="F:\wed2\imagess\pr3.jpg" alt="first bg image" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="F:\wed2\imagess\pr4.jpg" alt="first bg image" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
